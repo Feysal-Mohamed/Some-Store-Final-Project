@@ -23,7 +23,7 @@ const Shop = () => {
   };
 
   useEffect(() => {
-    fetch("http://localhost:7000/read/product")
+    fetch("https://som-store-bacend.onrender.com/read/product")
       .then((res) => res.json())
       .then((data) => setProducts(data))
       .catch((err) => console.error("Error fetching products:", err));
