@@ -108,7 +108,8 @@ const App = () => {
       <Route path='/post/:id' element={<DetailsBlog />} />
     </Routes>
     </div>
-  )
+  ) 
+  
 }
 
 export default App
