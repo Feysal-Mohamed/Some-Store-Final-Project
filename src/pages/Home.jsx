@@ -68,7 +68,7 @@ const Home = () => {
   const [products, setProducts] = useState([])
 
   useEffect(() => {
-    fetch('http://localhost:7000/read/product')
+    fetch('https://som-store-bacend.onrender.com/read/product')
       .then(res => res.json())
       .then(data => setProducts(data))
       .catch(err => console.error('Error fetching products:', err))
@@ -122,7 +122,7 @@ const Home = () => {
               className="bg-white rounded-2xl border border-gray-100 shadow-md p-5 flex flex-col items-center hover:scale-[1.03] hover:shadow-xl transition-all duration-300"
             >
               <motion.img
-                src={`http://localhost:7000/AlImages/${item.prImg}`}
+                src={`https://som-store-bacend.onrender.com/AlImages/${item.prImg}`}
                 alt={item.name}
                 className="rounded-xl w-full h-56 object-cover mb-4"
                 whileHover={{ rotate: 1, scale: 1.05 }}

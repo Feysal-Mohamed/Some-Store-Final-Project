@@ -8,7 +8,7 @@ const Orders = () => {
   // Fetch all orders
   const fetchOrders = async () => {
     try {
-      const res = await axios.get('http://localhost:7000/read/orders');
+      const res = await axios.get('https://som-store-bacend.onrender.com/read/orders');
       setOrders(res.data);
     } catch (err) {
       console.log('Failed to fetch orders', err);
@@ -22,7 +22,7 @@ const Orders = () => {
   // Mark as delivered
   const handleMarkDelivered = async (orderId) => {
     try {
-      await axios.patch(`http://localhost:7000/mark-single-delivered/order/${orderId}`);
+      await axios.patch(`https://som-store-bacend.onrender.com/mark-single-delivered/order/${orderId}`);
       setOrders(prev =>
         prev.map(order => order._id === orderId ? { ...order, delivered: true } : order)
       );
@@ -35,7 +35,7 @@ const Orders = () => {
   const handleDeleteOrder = async (orderId) => {
     if (!window.confirm('Are you sure you want to delete this order?')) return;
     try {
-      await axios.delete(`http://localhost:7000/delete/order/${orderId}`);
+      await axios.delete(`https://som-store-bacend.onrender.com/delete/order/${orderId}`);
       setOrders(prev => prev.filter(order => order._id !== orderId));
     } catch (err) {
       console.log('Failed to delete order', err);
@@ -79,7 +79,7 @@ const Orders = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {order.Products.map((item, idx) => (
                   <div key={idx} className="border p-3 rounded flex items-center space-x-4">
-                    {item.prImg && <img src={`http://localhost:7000/AlImages/${item.prImg}`} alt={item.name} className="w-16 h-16 object-cover rounded" />}
+                    {item.prImg && <img src={`https://som-store-bacend.onrender.com/AlImages/${item.prImg}`} alt={item.name} className="w-16 h-16 object-cover rounded" />}
                     <div>
                       <div className="font-bold">{item.name}</div>
                       <div>Quantity: {item.quantity}</div>
@@ -113,7 +113,7 @@ const Orders = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {order.Products.map((item, idx) => (
                   <div key={idx} className="border p-3 rounded flex items-center space-x-4">
-                    {item.prImg && <img src={`http://localhost:7000/AlImages/${item.prImg}`} alt={item.name} className="w-16 h-16 object-cover rounded" />}
+                    {item.prImg && <img src={`https://som-store-bacend.onrender.com/AlImages/${item.prImg}`} alt={item.name} className="w-16 h-16 object-cover rounded" />}
                     <div>
                       <div className="font-bold">{item.name}</div>
                       <div>Quantity: {item.quantity}</div>

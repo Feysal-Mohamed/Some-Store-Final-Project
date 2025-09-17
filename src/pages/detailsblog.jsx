@@ -8,7 +8,7 @@ function DetailsBlog(){
 
   useEffect(() => {
     axios
-      .get(`http://localhost:7000/read/post/${id}`)
+      .get(`https://som-store-bacend.onrender.com/read/post/${id}`)
       .then((res) => setPost(res.data))
       .catch((err) => console.error("Error fetching post details:", err));
   }, [id]);
@@ -16,7 +16,7 @@ function DetailsBlog(){
 
   useEffect(() => {
     axios
-      .get("http://localhost:7000/read/post")
+      .get("https://som-store-bacend.onrender.com/read/post")
       .then((res) => setPosts(res.data))
       .catch((err) => console.error("Error fetching posts:", err));
   }, []);
@@ -35,7 +35,7 @@ function DetailsBlog(){
         <div className="md:col-span-2">
           {/* Sawirka weyn */}
           <img
-            src={`http://localhost:7000/AlImages/${post.image}`}
+            src={`https://som-store-bacend.onrender.com/AlImages/${post.image}`}
             alt="Blog main"
             className="w-full h-[300px] object-cover rounded-lg mb-6"
           />
@@ -88,7 +88,7 @@ function DetailsBlog(){
                   {posts.slice(0, 3).map((data) => (
               <div key={data._id} className="flex items-center gap-4">
                 <img
-                  src={`http://localhost:7000/AlImages/${data.image}`}
+                  src={`https://som-store-bacend.onrender.com/AlImages/${data.image}`}
                   alt="Blog"
                   className="w-14 h-14 rounded-full object-cover"
                 />

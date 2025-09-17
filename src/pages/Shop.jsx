@@ -92,7 +92,7 @@ const Shop = () => {
                 >
                   <img
                     className="rounded-xl h-40 w-full object-cover"
-                    src={`http://localhost:7000/AlImages/${items.prImg}`}
+                    src={`https://som-store-bacend.onrender.com/AlImages/${items.prImg}`}
                     alt={items.name}
                   />
                   <h1 className="mt-3 font-semibold text-gray-800">

@@ -76,7 +76,7 @@ const CartPage = () => {
       const customerPhone = loggedInUser.Phone || "";
 
       const response = await axios.post(
-        "http://localhost:7000/create/order",
+        "https://som-store-bacend.onrender.com/create/order",
         {
           Customers: customerName,
           customerEmail,
@@ -126,7 +126,7 @@ const CartPage = () => {
                   <tr key={item._id} className="border-b border-gray-200">
                     <td className="px-6 py-4 flex items-center space-x-4">
                       <img
-                        src={`http://localhost:7000/AlImages/${item.prImg}`}
+                        src={`https://som-store-bacend.onrender.com/AlImages/${item.prImg}`}
                         alt={item.name}
                         className="w-20 h-20 object-cover rounded-lg"
                       />

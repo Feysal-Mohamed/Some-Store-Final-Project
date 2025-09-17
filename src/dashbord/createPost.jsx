@@ -16,7 +16,7 @@ const CreatePost = () => {
     formData.append("image", image);
 
     try {
-      const res = await fetch("http://localhost:7000/create/post", {
+      const res = await fetch("https://som-store-bacend.onrender.com/create/post", {
         method: "POST",
         body: formData,
       });

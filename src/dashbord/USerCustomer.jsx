@@ -42,7 +42,7 @@ const UsersPage = () => {
   try {
     const token = JSON.parse(localStorage.getItem("LoggedInUser"))?.token;
     await axios.put(
-      `http://localhost:7000/removeAdmin/${userId}`,
+      `https://som-store-bacend.onrender.com/removeAdmin/${userId}`,
       {},
       { headers: { Authorization: `Bearer ${token}` } }
     );
@@ -57,7 +57,7 @@ const UsersPage = () => {
     try {
       const token = JSON.parse(localStorage.getItem("LoggedInUser"))?.token;
       await axios.put(
-        `http://localhost:7000/makeAdmin/${userId}`,
+        `https://som-store-bacend.onrender.com/makeAdmin/${userId}`,
         {},
         { headers: { Authorization: `Bearer ${token}` } }
       );

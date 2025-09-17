@@ -9,7 +9,7 @@ const Blogs = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:7000/read/post")
+      .get("https://som-store-bacend.onrender.com/read/post")
       .then((res) => setPosts(res.data))
       .catch((err) => console.error("Error fetching posts:", err));
   }, []);
@@ -30,7 +30,7 @@ const Blogs = () => {
             <Link to={`/post/${post._id}`} key={post._id}>
               <div className="bg-white shadow-md rounded-2xl overflow-hidden hover:shadow-xl transition-shadow">
                 <img
-                  src={`http://localhost:7000/AlImages/${post.image}`}
+                  src={`https://som-store-bacend.onrender.com/AlImages/${post.image}`}
                   alt={post.title}
                   className="w-full h-56 object-cover"
                 />
