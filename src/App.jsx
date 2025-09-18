@@ -106,6 +106,7 @@ const App = () => {
       <Route path='/login' element={<LoginForm />} />
       <Route path='/myDelivery' element={<MyDelivery />} />
       <Route path='/post/:id' element={<DetailsBlog />} />
+      <Route path='/singleproduct/:id' element={<SingleProduct/>} />
     </Routes>
     </div>
   ) 
